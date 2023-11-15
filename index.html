@@ -8,8 +8,8 @@
 </head>
 <body>
   <div class="sidebar">
-    <div class="menu">
-      <div class="menu-item" onclick="toggleSubMenu('file-menu', this)">
+    <div class="menu" data-submenu="file-menu">
+      <div class="menu-item">
         <span class="menu-icon">📁</span>
         <span class="menu-text">File</span>
         <span class="arrow">▶️</span>
@@ -17,7 +17,7 @@
       <div class="sub-menu" id="file-menu">
         <div class="sub-menu-item">Open</div>
         <div class="sub-menu-item">Save</div>
-        <div class="sub-menu-item" onclick="toggleSubMenu('nested-menu', this)">
+        <div class="sub-menu-item" data-submenu="nested-menu">
           <span class="arrow">▶️</span>
           <span class="menu-text">Nested Menu</span>
         </div>
@@ -28,8 +28,8 @@
         <div class="sub-menu-item">Exit</div>
       </div>
     </div>
-    <div class="menu">
-      <div class="menu-item" onclick="toggleSubMenu('edit-menu', this)">
+    <div class="menu" data-submenu="edit-menu">
+      <div class="menu-item">
         <span class="menu-icon">✏️</span>
         <span class="menu-text">Edit</span>
         <span class="arrow">▶️</span>
