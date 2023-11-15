@@ -14,76 +14,63 @@ body {
   .menu {
     padding: 10px;
     cursor: pointer;
+    position: relative;
   }
   
   .menu-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    justify-content: space-between;
+   
   }
   
   .menu-icon {
     margin-right: 10px;
   }
-  
+  .sidebar .menu li .icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .sub-menu {
-    display: none;
-    padding-left: 20px;
+   /*  display: none; */
+    flex-direction: column;
+    background-color: #34495e;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 100%;
+    width: max-content;
   }
   
   .sub-menu-item {
     margin-bottom: 5px;
     cursor: pointer;
+    padding: 8px;
   }
   
-  /* Agregamos una clase "hidden" para ocultar los submenús inicialmente */
-  .sub-menu {
-    display: none;
-  }
-  
-  .sub-menu.show {
+  .menu-item.expanded .sub-menu {
     display: flex;
+    flex-direction: column; /* Muestra los submenús en columnas */
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 1;
+    width: max-content;
   }
   
   .menu-item .arrow {
-    margin-left: auto;
-    transition: transform 0.3s ease; /* Transición para la rotación de la flecha */
+    transition: transform 0.3s ease;
   }
   
   .menu-item.expanded .arrow {
     transform: rotate(90deg);
   }
-  /* Resto del código es el mismo */
   
-  .sub-menu {
-    display: none;
-    flex-direction: column; /* Muestra los submenús en columnas */
-    background-color: #34495e; /* Fondo del submenú */
-    position: absolute; /* Posición absoluta para superponer los submenús */
-    z-index: 1; /* Asegura que los submenús estén sobre los demás elementos */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el submenú */
-  }
   
-  .sub-menu.show {
-    display: flex;
-  }
-  
-  .sub-menu-item {
-    margin-bottom: 5px;
-    cursor: pointer;
-    padding: 8px; /* Añade un espacio interno al submenú item */
-  }
   
   .sub-menu-item:hover {
-    background-color: #2c3e50; /* Cambia el color de fondo al pasar el ratón */
+    background-color: #2c3e50;
   }
-  
-  /* Añadimos márgenes y estilos para la estructura de árbol */
-  .menu-item {
-    margin-bottom: 5px;
-  }
-  
-  .menu-item.expanded .sub-menu {
-    margin-left: 20px; /* Márgen izquierdo para indicar la estructura de árbol */
-  }
-  
