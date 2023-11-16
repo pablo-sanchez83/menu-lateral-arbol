@@ -1,6 +1,6 @@
 // Obtén una NodeList de todos los elementos con la clase "arrow"
 const arrows = document.querySelectorAll('.arrow');
-
+console.log(arrows);
 // Itera sobre cada flecha y agrega un evento de clic
 arrows.forEach(arrow => {
   arrow.addEventListener('click', function() {
@@ -11,5 +11,12 @@ arrows.forEach(arrow => {
 
     // Cambia la clase "expanded" para girar la flecha
     this.parentElement.classList.toggle('expanded');
+    
+    
   });
+});
+arrows.forEach(arrow => {
+  arrow.addEventListener('click', function() {
+    this.classList.toggle('expanded-arrow');
+});
 });

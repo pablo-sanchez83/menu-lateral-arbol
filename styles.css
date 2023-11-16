@@ -45,21 +45,22 @@ body {
     display: flex;
   }
   
-  .menu-item .arrow {
-    margin-left: auto;
-    transition: transform 0.3s ease; /* Transición para la rotación de la flecha */
-  }
-  
-  .menu-item.expanded .arrow {
+  .expanded-arrow {
     transform: rotate(90deg);
   }
+  .arrow{
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
   /* Resto del código es el mismo */
-  
+  .nested {
+    display: flex;
+  }
   .sub-menu {
     display: none;
     flex-direction: column; /* Muestra los submenús en columnas */
     background-color: #34495e; /* Fondo del submenú */
-    position: absolute; /* Posición absoluta para superponer los submenús */
+    position: relative; /* Posición absoluta para superponer los submenús */
     z-index: 1; /* Asegura que los submenús estén sobre los demás elementos */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el submenú */
   }
